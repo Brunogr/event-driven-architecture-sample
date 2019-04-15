@@ -1,0 +1,57 @@
+@import "../../app.component.css";
+.gerar-numeros {
+    width: 50%;
+    margin: 0px auto 50px;
+    display: table;
+}
+button{
+    padding: 15px;
+    margin: 0 auto;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #00923f;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+}
+button:focus{
+    outline: none;
+}
+
+.gerar-numeros h1 {
+    margin: 20px 0;
+    font-size: 25px;
+    color: #ec9d25;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+thead tr {
+    background-color: #eaeaea;
+    
+}
+tr th{
+    font-size: 18px;
+    color: rgb(150, 150, 150);
+    text-align: right;
+    padding: 15px;
+    line-height: 1.4;
+}
+tr td {
+    font-size: 15px;
+    color: rgb(150, 150, 150);
+    line-height: 1.4;
+    text-align: right;
+    padding: 15px;
+}
+tbody tr {
+    border: 1px solid #ddd;
+}
+@media (max-width: 991px) {
+    .gerar-numeros {
+        width: 90%!important;
+    }
+}

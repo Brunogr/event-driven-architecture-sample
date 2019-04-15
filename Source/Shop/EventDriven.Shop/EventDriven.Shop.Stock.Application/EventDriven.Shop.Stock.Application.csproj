@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Commander.Core\Commander.Core.csproj" />
+    <ProjectReference Include="..\EventDrive.Shop.Shared\EventDrive.Shop.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

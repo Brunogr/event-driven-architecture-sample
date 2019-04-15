@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Commander.Abstractions\Commander.Abstractions.csproj" />
+    <ProjectReference Include="..\Commander.Core\Commander.Core.csproj" />
+    <ProjectReference Include="..\EventDriven.Shop.Cart\EventDriven.Shop.Cart.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
