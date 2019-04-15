@@ -6,6 +6,7 @@ namespace EventDriven.Shop.Stock.Domain.Models
 {
     public class Estoque
     {
+        protected Estoque() { }
         public Estoque(Produto produto, int quantidadeDisponivel)
         {
             Id = Guid.NewGuid();
@@ -14,6 +15,7 @@ namespace EventDriven.Shop.Stock.Domain.Models
         }
 
         public Guid Id { get; set; }
+        public Guid ProdutoId { get; set; }
         public Produto Produto { get; set; }
         public int QuantidadeDisponivel { get; set; }
     }

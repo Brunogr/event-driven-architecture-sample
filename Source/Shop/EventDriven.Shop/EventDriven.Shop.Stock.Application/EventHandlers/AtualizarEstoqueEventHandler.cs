@@ -8,9 +8,9 @@ namespace EventDriven.Shop.Stock.Application.EventHandlers
 {
     public class AtualizarEstoqueEventHandler : Commander.Core.EventHandler<AtualizarEstoqueEvent>
     {
-        public override Task HandleEvent(AtualizarEstoqueEvent @event)
+        public async override Task HandleEvent(AtualizarEstoqueEvent @event)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Chegou evento " + @event.ProdutoId);
         }
     }
 }
