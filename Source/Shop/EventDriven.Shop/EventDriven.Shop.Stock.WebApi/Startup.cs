@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace EventDriven.Shop.Cart.WebApi
+namespace EventDriven.Shop.Stock.WebApi
 {
     public class Startup
     {
@@ -39,15 +39,17 @@ namespace EventDriven.Shop.Cart.WebApi
             services.AddMvc()
                 .AddNewtonsoftJson();
 
-            //services.AddCommander();
-            services.AddMessageBusServiceBus(a => a.Configure(new MessageBusConfiguration("Endpoint=sb://event-driven-sample.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=/evMRy4ApKPmiRRd7fxNUTGKR4qcgWU42XdIAlm/Rl0=;TransportType=Amqp")));
-            services.AddCartDatabase();
+            services.AddDatabase();
+
+            services.SeedDatabase();
+
             services.AddLogging();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             app.UseCors("CorsPolicy");
 
             if (env.IsDevelopment())
@@ -68,9 +70,6 @@ namespace EventDriven.Shop.Cart.WebApi
             });
 
             app.UseAuthorization();
-
-            app.UseMvc();
-            
         }
     }
 }

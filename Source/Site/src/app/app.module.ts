@@ -5,22 +5,23 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { CartelaComponent } from './components/cartela/cartela.component';
-import { SorteioComponent } from './components/sorteio/sorteio.component';
-import { CartelaService } from './services/cartela.service';
+import { CarrinhoComponent } from './components/carrinho/carrinho.component';
+import { EstoqueComponent } from './components/estoque/estoque.component';
+import { CarrinhoService } from './services/carrinho.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
-import { SorteioService } from './services/sorteio.service';
+import { EstoqueService } from './services/estoque.service';
 import { AppServiceInterceptor } from './interceptors/app.service.interceptor';
+import { ProdutoService } from './services/produto.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     HeaderComponent,
     HomeComponent,
-    CartelaComponent,
-    SorteioComponent
+    CarrinhoComponent,
+    EstoqueComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +30,9 @@ import { AppServiceInterceptor } from './interceptors/app.service.interceptor';
     FormsModule
   ],
   providers: [
-    CartelaService,
-    SorteioService,
+    CarrinhoService,
+    EstoqueService,
+    ProdutoService,
     { provide: HTTP_INTERCEPTORS, useClass: AppServiceInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

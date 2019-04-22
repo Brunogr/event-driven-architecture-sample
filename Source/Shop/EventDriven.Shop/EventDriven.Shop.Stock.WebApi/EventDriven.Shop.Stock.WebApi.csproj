@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -6,12 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview3-19153-02" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Commander.MessageBus\Commander.MessageBus.ServiceBus.csproj" />
-    <ProjectReference Include="..\EventDrive.Shop.Cart.Infra.Database\EventDrive.Shop.Cart.Infra.Database.csproj" />
-    <ProjectReference Include="..\EventDriven.Shop.Cart\EventDriven.Shop.Cart.Domain.csproj" />
+    <ProjectReference Include="..\EventDriven.Shop.Stock.Domain\EventDriven.Shop.Stock.Domain.csproj" />
+    <ProjectReference Include="..\EventDriven.Shop.Stock.Infra.Database\EventDriven.Shop.Stock.Infra.Database.csproj" />
   </ItemGroup>
 
 </Project>

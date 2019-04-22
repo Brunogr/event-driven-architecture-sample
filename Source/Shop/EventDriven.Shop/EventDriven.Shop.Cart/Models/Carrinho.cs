@@ -1,7 +1,8 @@
-﻿using EventDrive.Shop.Shared.Base;
-using EventDrive.Shop.Shared.Events;
+﻿using EventDriven.Shop.Shared.Base;
+using EventDriven.Shop.Shared.Events;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace EventDriven.Shop.Cart.Domain.Models
@@ -21,8 +22,16 @@ namespace EventDriven.Shop.Cart.Domain.Models
             }
         }
 
+        public void AdicionarProduto(Produto produto)
+        {
+            AddEvent(new AtualizarEstoqueEvent(produto.Id));
+
+            this.Produtos.Add(produto);
+        }
+
         public Guid Id { get; set; }
         public Comprador Comprador { get; set; }
-        public List<Produto> Produtos { get; set; }
+        public decimal ValorTotal => Produtos.Select(x => x.Valor).Sum();
+        public List<Produto> Produtos { get; private set; }
     }
 }

@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Commander.Abstractions\Commander.Abstractions.csproj" />
     <ProjectReference Include="..\Commander.Core\Commander.Core.csproj" />
+    <ProjectReference Include="..\EventDrive.Shop.Cart.Infra.Database\EventDrive.Shop.Cart.Infra.Database.csproj" />
     <ProjectReference Include="..\EventDriven.Shop.Cart\EventDriven.Shop.Cart.Domain.csproj" />
   </ItemGroup>
 

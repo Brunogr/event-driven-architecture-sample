@@ -1,6 +1,6 @@
-import { CartelaModel } from "./cartela.model";
+import { CarrinhoModel } from "./carrinho.model";
 
 export class GanhadorModel{
     Acertos : number;
-    Cartela : CartelaModel;
+    Cartela : CarrinhoModel;
 }

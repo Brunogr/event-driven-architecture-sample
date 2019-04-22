@@ -15,8 +15,8 @@ export class AppService<TModel> {
     constructor(private http: HttpClient) { }
 
     private version = environment.versionBase;
-    private domain = environment.baseUrl;
-    private url: string = this.domain + "/loteria/api/" + this.version 
+    protected domain = environment.baseUrl;
+    private url: string = this.domain + '/api/';
 
     get headers(): HttpHeaders {
         const headers = new HttpHeaders();
@@ -30,7 +30,8 @@ export class AppService<TModel> {
     }
 
     private methodUrl(method: string) {
-        return this.url.concat(method);
+        var url = this.domain.concat("api/")
+        return url.concat(method);
     }
 
 

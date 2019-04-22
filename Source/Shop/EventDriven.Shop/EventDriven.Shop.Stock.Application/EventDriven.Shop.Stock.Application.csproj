@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,7 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Commander.Core\Commander.Core.csproj" />
-    <ProjectReference Include="..\EventDrive.Shop.Shared\EventDrive.Shop.Shared.csproj" />
+    <ProjectReference Include="..\EventDriven.Shop.Shared\EventDriven.Shop.Shared.csproj" />
+    <ProjectReference Include="..\EventDriven.Shop.Stock.Infra.Database\EventDriven.Shop.Stock.Infra.Database.csproj" />
   </ItemGroup>
 
 </Project>

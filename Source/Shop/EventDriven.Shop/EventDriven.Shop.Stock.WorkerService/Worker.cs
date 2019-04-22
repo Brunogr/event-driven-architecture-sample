@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Commander.MessageBus.Abstractions;
-using EventDrive.Shop.Shared.Events;
+using EventDriven.Shop.Shared.Events;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -23,7 +23,7 @@ namespace EventDriven.Shop.Stock.WorkerService
         {
             logger.LogInformation($"Worker running at: {DateTime.Now}");
             await messageBus.SubscribeAsync<AtualizarEstoqueEvent>();
-            
+
         }
     }
 }

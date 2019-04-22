@@ -1,0 +1,19 @@
+<div class="gerar-numeros">
+<h1>Estoque:</h1>
+<table>
+    <thead>
+      <tr>
+        <th>Nome Produto</th>
+        <th>Quantidade Disponivel</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let estoque of estoques">
+            <td>{{estoque.produto.nome}}</td>
+            <td>{{estoque.quantidadeDisponivel}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+    

@@ -27,6 +27,7 @@ namespace EventDriven.Shop.Cart.WorkerService
                     services.AddHostedService<Worker>();
                     Assembly.Load("EventDriven.Shop.Cart.Application");
                     services.AddMessageBusServiceBus(a => a.Configure(new MessageBusConfiguration("Endpoint=sb://event-driven-sample.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=/evMRy4ApKPmiRRd7fxNUTGKR4qcgWU42XdIAlm/Rl0=;TransportType=Amqp")));
+                    services.AddCartDatabase();
                     services.AddLogging();
                 });
     }

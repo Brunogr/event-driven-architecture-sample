@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Commander.Abstractions;
 using Commander.MessageBus.Abstractions;
+using EventDrive.Shop.Cart.Infra.Database.Interfaces;
 using EventDriven.Shop.Cart.Domain.Commands;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,9 +15,11 @@ namespace EventDriven.Shop.Cart.WebApi.Controllers
     public class CarrinhoController : ControllerBase
     {
         private readonly IMessageBus messageBus;
-        public CarrinhoController(IMessageBus messageBus)
+        private readonly ICarrinhoRepository carrinhoRepository;
+        public CarrinhoController(IMessageBus messageBus, ICarrinhoRepository carrinhoRepository)
         {
             this.messageBus = messageBus;
+            this.carrinhoRepository = carrinhoRepository;
         }
         
         // POST api/values
@@ -27,6 +30,14 @@ namespace EventDriven.Shop.Cart.WebApi.Controllers
 
             return Ok(command);
         }
-        
+
+        [HttpGet]
+        public async Task<ActionResult> GetAll()
+        {
+            var carrinhos = await carrinhoRepository.GetAllAsync();
+
+            return Ok(carrinhos);
+        }
+
     }
 }

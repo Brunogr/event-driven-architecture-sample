@@ -6,15 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+    <PackageReference Include="MediatR" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0-preview3.19153.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Commander.Abstractions\Commander.Abstractions.csproj" />
+    <ProjectReference Include="..\Commander.Core\Commander.Core.csproj" />
+    <ProjectReference Include="..\Commander.MessageBus.Abstractions\Commander.MessageBus.Abstractions.csproj" />
     <ProjectReference Include="..\Commander.MessageBus\Commander.MessageBus.ServiceBus.csproj" />
-    <ProjectReference Include="..\EventDrive.Shop.Shared\EventDrive.Shop.Shared.csproj" />
-    <ProjectReference Include="..\EventDriven.Shop.Cart.Infra.Repository\EventDriven.Shop.Stock.Infra.Data.csproj" />
+    <ProjectReference Include="..\EventDriven.Shop.Shared\EventDriven.Shop.Shared.csproj" />
     <ProjectReference Include="..\EventDriven.Shop.Stock.Application\EventDriven.Shop.Stock.Application.csproj" />
+    <ProjectReference Include="..\EventDriven.Shop.Stock.Infra.Database\EventDriven.Shop.Stock.Infra.Database.csproj" />
   </ItemGroup>
 </Project>

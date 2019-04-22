@@ -1,0 +1,128 @@
+@import "../../app.component.css";
+.inputs {
+    margin: 0px auto;
+    height: 100%;
+    padding: 3% 10px;
+    width: 50%;
+    display: table;
+}
+
+img {
+    max-width: 100%;
+    float: left;
+}
+.inputs input {
+    float: left;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 15px 0 0;
+    color: #adafaf;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+input:focus {
+    outline: none;
+}
+.produtos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 50%;
+    margin: 0px auto 40px;
+}
+.buttons {
+    width: 28%;
+}
+input::-webkit-inner-spin-button {
+    display: none;
+}
+button{
+    padding: 15px;
+    margin: 0 auto;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #808080;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100%;
+}
+button:focus{
+    outline: none;
+}
+
+.tabela{
+    width: 50%;
+    margin: 40px auto 60px;
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 20px 0;
+    align-content: center;
+    font-size: 30px;
+    color: #0a022b;
+    width: 100%;
+    margin: 0px auto 20px;
+    text-align:center;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 25px;
+    color: #050107;
+    width: 50%;
+    margin: 0px auto 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+thead tr {
+    background-color: #eaeaea;
+    
+}
+tr th{
+    font-size: 18px;
+    color: rgb(150, 150, 150);
+    text-align: right;
+    padding: 15px;
+    line-height: 1.4;
+}
+tr td {
+    font-size: 15px;
+    color: #808080;
+    line-height: 1.4;
+    text-align: right;
+    padding: 15px;
+}
+tbody tr {
+    border: 1px solid #ddd;
+}
+@media (max-width: 991px) {
+    .inputs {
+        width: 90%;
+    }
+    .buttons{
+        width: 90%!important;
+    }
+    button {
+        margin: 10px auto;
+    }
+    .tabela {
+        overflow: scroll!important;
+        width: 90%!important;
+    }
+}

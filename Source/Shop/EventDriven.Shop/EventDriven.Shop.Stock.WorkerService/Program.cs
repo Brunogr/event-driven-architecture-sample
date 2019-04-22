@@ -26,9 +26,14 @@ namespace EventDriven.Shop.Stock.WorkerService
                 {
                     services.AddHostedService<Worker>();
                     Assembly.Load("EventDriven.Shop.Stock.Application");
-                    services.AddMessageBusServiceBus(a => a.Configure(new MessageBusConfiguration("Endpoint=sb://event-driven-sample.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=/evMRy4ApKPmiRRd7fxNUTGKR4qcgWU42XdIAlm/Rl0=;TransportType=Amqp")));
-                    services.AddData("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=Shop.Stock;Integrated Security=True");
-                    services.AddLogging();
+                    services
+                    .AddMessageBusServiceBus(a => 
+                        a.Configure(
+                            new MessageBusConfiguration("Endpoint=sb://event-driven-sample.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=/evMRy4ApKPmiRRd7fxNUTGKR4qcgWU42XdIAlm/Rl0=;TransportType=Amqp")
+                            )
+                        )
+                    .AddDatabase()
+                    .AddLogging();
                 });
     }
 }

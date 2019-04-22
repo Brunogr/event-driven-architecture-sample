@@ -1,17 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="6.0.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.8.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Commander.Abstractions\Commander.Abstractions.csproj" />
     <ProjectReference Include="..\Commander.Core\Commander.Core.csproj" />
-    <ProjectReference Include="..\EventDriven.Shop.Shared\EventDriven.Shop.Shared.csproj" />
   </ItemGroup>
 
 </Project>
